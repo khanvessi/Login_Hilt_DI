@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.logintask.ui.presentation.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.logintask.ui.presentation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.logintask.ui.presentation.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" />
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.logintask.ui.presentation.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" />
+</navigation>
