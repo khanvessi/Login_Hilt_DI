@@ -11,11 +11,12 @@ import javax.inject.Provider
 
 @Database(entities = [User::class], version = 2, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
-
     abstract fun userDao(): UserDao
 
     class CallBack @Inject constructor(
+
         private val database: Provider<UserDatabase>,
+
         @AppModule.ApplicationScope private val applicationScope: CoroutineScope
     ) : RoomDatabase.Callback(){
         override fun onCreate(db: SupportSQLiteDatabase) {

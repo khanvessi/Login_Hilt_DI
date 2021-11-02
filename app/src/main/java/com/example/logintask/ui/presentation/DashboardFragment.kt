@@ -58,6 +58,8 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard), View.OnClickLis
                                 }.show()
                     }
                     //THIS IS TO AVOID ELSE CASE
+                    is UserViewModel.UserEvent.ShowUserRegistrationMessage -> TODO()
+                    is UserViewModel.UserEvent.ShowUserValidationMessage -> TODO()
                 }.exhaustive
             }
         }

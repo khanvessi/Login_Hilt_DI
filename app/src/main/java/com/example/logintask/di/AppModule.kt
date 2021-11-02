@@ -32,7 +32,6 @@ object AppModule {
 
     //THIS IS NOT JUST COROUTINE SCOPE BUT THIS IS THE APPLICATION SCOPE
     @ApplicationScope
-
     @Provides
     @Singleton
     fun provideCoroutineScope() = CoroutineScope(SupervisorJob())

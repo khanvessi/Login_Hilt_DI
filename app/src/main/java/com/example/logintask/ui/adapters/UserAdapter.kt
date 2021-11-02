@@ -10,8 +10,6 @@ import android.view.ViewGroup
 
 
 class UserAdapter : androidx.recyclerview.widget.ListAdapter<User, UserAdapter.UsersViewHolder>(DiffCallback()) {
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder {
         val binding = ItemUserBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return UsersViewHolder(binding)
